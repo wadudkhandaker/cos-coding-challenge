@@ -3,7 +3,7 @@
 Welcome to the CarOnSale backend coding challenge.
 
 In the `/src/app` directory, you find a typescript interface `ICarOnSaleClient` for a service that describes a service to retrieve a list of running auctions from the CarOnSale development API.
-Please implement the service and use the "salesman" (buyer) user with the mail ID "salesman@random.com" and the credentials (password) "123test".
+Please implement the service and use the "salesman" (buyer) user with the mail ID `salesman@random.com` and the credentials (password) `Test123.`.
 
 The API is documented here: https://api-core-dev.caronsale.de/swagger/#/
 
