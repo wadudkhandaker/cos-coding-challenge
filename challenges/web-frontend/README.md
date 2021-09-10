@@ -20,9 +20,8 @@ Please fork the repo and create the Angular project in the directory of this REA
 Note that the solution must be coded in Angular, as this is the framework we are using internally. 
 No previous professional experience with Angular will be consider when checking the results
 
-There is no time constraint for this challenge, you can take as much time as necessary in order to provide a solution that represents you. 
-But in order to dedicate internal resources to review your solution, we kindly ask you to send us an estimation of the time to <coding-challenge@caronsale.de>. This way we will be able to reduce the selection process duration.
-
+You do have 7 days to solve the challenge - in case you need more time to to work out a high quality solution, just let us 
+know and we will adjust the deadline for you. You just need to fork the repository, implement a solution and send the link to coding-challenge@caronsale.de
 ## Your Resources:
 
 You can find the Swagger documentation of our REST API here (The „Authorize“ feature of Swagger is not working with our API):
