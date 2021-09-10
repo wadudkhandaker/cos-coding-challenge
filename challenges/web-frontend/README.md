@@ -35,9 +35,9 @@ The base URL of our REST service is <https://api-core-dev.caronsale.de/api/v1>.
 - The „User ID“ for REST calls is not the internal „id“ of a user, but the „mailAddress“.
 - You don’t need to register new users, existing test accounts are
    - Buyer User:
-      - buyer-challenge@caronsale.com (PW: `Test123.` - notice the period)
+      - buyer-challenge@caronsale.de (PW: `Test123.` - notice the period)
    - Seller User:
-      - seller-challenge@caronsale.com (PW: `Test123.` - notice the period)
+      - seller-challenge@caronsale.de (PW: `Test123.` - notice the period)
 - The authentication process is part of the challenge, please use any `authentication` endpoint in the "Authentication" section in our Swagger you may consider.
 - Once authenticated use any `buyer` endpoint in the "Auctions" section you may consider. This will offer you automatically a set of auctions filtered for this user (don't use a `public` endpoint, as it will show you only a set of public auctions not connected to the logged in user).
 
