@@ -1,12 +1,12 @@
-# Web Frontend Challenge
+# Ionic Challenge
 
-Welcome to the CarOnSale Web Frontend Coding Challenge.
+Welcome to the CarOnSale Ionic Coding Challenge.
 
 To assess your skills and knowledge about the relevant technologies, we want you to build us a simple user interface for our backend service.
 
 ## Your Task:
 
-Build a simple Angular (v7 - v12 or latest) application that includes:
+Build a simple Ionic (v5.8 or latest) application using Angular (v12 or latest) that includes:
 - **Login Page to login registered buyers** (also known as „salesman“). Note that if a Non-Buyer registers, an error message should pop up.
 - **Overview Page (only for logged in buyers) to display all running auctions (updated every 20 seconds)**, including
    - vehicle image thumbnail (vehicle images may not show actual vehicles cars on our DEV platform, but only test images)
@@ -17,7 +17,7 @@ Build a simple Angular (v7 - v12 or latest) application that includes:
    
 Please fork the repo and create the Angular project in the directory of this README.
 
-Note that the solution must be coded in Angular, as this is the framework we are using internally. 
+Note that the solution must be coded in Angular using Ionic, as this is the framework we are using internally. 
 No previous professional experience with Angular will be consider when checking the results
 
 You do have 7 days to solve the challenge - in case you need more time to to work out a high quality solution, just let us 
