@@ -1,4 +1,4 @@
-<div fxLayout="row wrap" fxLayoutGap="16px grid" *ngIf="!isLoading">
+<div fxLayout="row wrap" fxLayoutGap="16px grid" *ngIf="!isLoading && auctions">
   <div
     fxFlex.gt-md="25%"
     class="auction-card"
@@ -44,5 +44,12 @@
 </div>
 <div  *ngIf="isLoading" class="text-center" fxLayout="row wrap" fxLayoutAlign="center start">
   <mat-spinner [diameter]="50"></mat-spinner>
+</div>
+
+<div  *ngIf="!isLoading && unAuthorizedMsg" class="text-center" fxLayout="row wrap" fxLayoutAlign="center start">
+  <h4>
+    {{unAuthorizedMsg}}
+  </h4>
+  
 </div>
 

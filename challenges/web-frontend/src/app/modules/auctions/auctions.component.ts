@@ -3,6 +3,8 @@ import { AuctionsService } from './services/auctions.service';
 import { AuthService } from './../../services/auth.service';
 import { Subscription } from 'rxjs';
 import { Auctions, Items } from './models/auctions.interface';
+import { HttpErrorResponse } from '@angular/common/http';
+import { HttpError } from 'src/app/interfaces/http-error.interface';
 
 @Component({
   selector: 'app-auctions',
@@ -13,6 +15,7 @@ export class AuctionsComponent implements OnInit, OnDestroy {
   subscription: Subscription = new Subscription;
   auctions!: Auctions;
   isLoading!: boolean;
+  unAuthorizedMsg!: string;
 
   constructor(private auctionsService: AuctionsService) {}
 
@@ -21,6 +24,10 @@ export class AuctionsComponent implements OnInit, OnDestroy {
     this.auctionsService?.getBuyerAuctions().pipe().subscribe((res: Auctions)=> {
       this.isLoading = false;
       this.auctions = res;
+    },
+    (errorResponse: HttpErrorResponse) => {
+      this.isLoading = false;
+      this.unAuthorizedMsg = (errorResponse?.error as HttpError)?.message as string;       
     });
   }
 
