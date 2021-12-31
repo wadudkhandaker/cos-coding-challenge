@@ -14,10 +14,9 @@ describe('AuctionsComponent', () => {
       declarations: [
         AuctionsComponent,
         FormatHourPipe,
-        HighestBidderPipe,
-        MatProgressSpinnerModule
+        HighestBidderPipe
       ],
-      imports: [HttpClientTestingModule, MatCardModule],
+      imports: [HttpClientTestingModule, MatCardModule, MatProgressSpinnerModule],
       providers: [
         AuthService,
         AuctionsService
