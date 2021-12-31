@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 import { AuthService } from "./../../services/auth.service";
+import { PAGES } from "./../../constant/pages.constant";
 
 @Component({
     selector: "app-toolbar",
@@ -12,6 +13,6 @@ export class ToolbarComponent{
 
     logout(): void {
         this.authService.logout();
-        this.router.navigate(['login'])
+        this.router.navigate([PAGES.login])
     }
 }

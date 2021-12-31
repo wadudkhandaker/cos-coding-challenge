@@ -14,7 +14,7 @@ export class AuctionsComponent implements OnInit, OnDestroy {
   auctions!: Auctions;
   isLoading!: boolean;
 
-  constructor(private auctionsService: AuctionsService, private authService: AuthService) {}
+  constructor(private auctionsService: AuctionsService) {}
 
   ngOnInit(): void {
     this.isLoading = true;
