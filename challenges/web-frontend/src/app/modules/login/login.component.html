@@ -1,0 +1,41 @@
+<mat-card class="card">
+   <div class="text-center mb-20">
+      <a href="/" aria-current="page" class="c-image_wrapper cc-navbar_img w-nav-brand w--current" aria-label="home">
+         <img src="https://uploads-ssl.webflow.com/60f0307b23fb87d67a969b13/60f0307b23fb8798d3969b4a_logo.svg" alt="caronsale logo" class="c-image">
+       </a>
+   </div>
+  
+   <mat-card-title>Login</mat-card-title>
+   <mat-card-content>
+      <form [formGroup]="formGroup" (ngSubmit)="submit()">
+      <div>
+         <mat-form-field>
+            <mat-label>Enter your email</mat-label>
+            <input type="text" matInput placeholder="buyer@example.com" name="Email" formControlName="userMailId">
+            <mat-error *ngIf="formGroup?.controls?.userMailId?.touched && formGroup?.controls?.userMailId?.errors?.required">
+               Email is required
+            </mat-error>
+            <mat-error *ngIf="formGroup?.controls?.userMailId?.touched && formGroup?.controls?.userMailId?.errors?.email">
+               Enter a valid email address
+            </mat-error>
+         </mat-form-field>
+      </div>
+
+      <div>
+         <mat-form-field>
+            <mat-label>Enter your password</mat-label>
+            <input type="password" matInput placeholder="Password" name="password" formControlName="password">
+            <mat-error *ngIf="formGroup?.controls?.password?.touched && formGroup?.controls?.password?.errors?.required">
+               Email is required
+            </mat-error>
+         </mat-form-field>
+      </div>
+
+      <div class="button mt-20">
+         <button type="submit" mat-button mat-raised-button class="w-100 btn" [disabled]="!formGroup.valid">Login</button>
+      </div>
+
+      </form>
+   </mat-card-content>
+</mat-card>
+

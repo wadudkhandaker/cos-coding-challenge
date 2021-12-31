@@ -1,0 +1,23 @@
+@import "../../../styles/variables.scss";
+
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: $primary-color;
+}
+
+.mat-form-field {
+  width: 100%;
+  min-width: 300px;
+}
+.card {
+  border-top: 4px solid $accent-color;
+  padding: 30px;
+  mat-card-title,
+  mat-card-content {
+    display: flex;
+    justify-content: center;
+  }
+}

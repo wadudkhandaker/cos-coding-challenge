@@ -1,0 +1,64 @@
+@import "./variables.scss";
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.w-100 {
+    width: 100%;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.yellow-snackbar {
+    background: $accent-color;
+    color: $text-color;
+}
+.btn {
+    background: $accent-color;
+}
+
+.auction-card {
+    .caption {
+        margin-top: -16px !important;
+        overflow: hidden;
+        aspect-ratio: 9.1/7;
+        margin: 0 -16px 16px -16px;
+    }
+    .mat-card-header {
+        min-height: 100px;
+        .mat-card-header-text {
+            overflow: hidden;
+            margin: 0;
+            .mat-card-title {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+       }
+    }
+   .bid-value {
+       font-size: 16px;
+       color: $primary-color;
+       .highest-chip {
+           background-color: $accent-color;
+           border-radius: 16px;
+           color: $text-color;
+           padding: 5px 10px;
+           font-weight: normal;
+           font-size: 12px;
+       }
+   }
+}
+.mat-progress-spinner {
+    circle {
+        stroke: $accent-color;
+    }
+}

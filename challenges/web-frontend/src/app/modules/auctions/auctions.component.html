@@ -1,0 +1,48 @@
+<div fxLayout="row wrap" fxLayoutGap="16px grid" *ngIf="!isLoading">
+  <div
+    fxFlex.gt-md="25%"
+    class="auction-card"
+    fxFlex.md="33%"
+    fxFlex.xs="100%"
+    fxFlex.sm="50%"
+    *ngFor="let auction of auctions?.items"
+  >
+    <mat-card class="mat-elevation-z4">
+      <div class="caption">
+        <img
+          mat-card-image
+          [src]="auction?.associatedVehicle?.vehicleImages[0].url"
+          alt="Photo of {{ auction?.associatedVehicle?.model }}"
+        />
+      </div>
+      <mat-card-header>
+        <mat-card-title>
+          {{ auction?.associatedVehicle?.model }}</mat-card-title
+        >
+        <mat-card-subtitle
+          >{{ auction?.associatedVehicle?.ez }} |
+          {{ auction?.associatedVehicle?.mileageInKm }} |
+          {{ auction?.associatedVehicle?.fuelType }} |
+          {{ auction?.associatedVehicle?.transmission }}
+        </mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <p>
+          <b class="bid-value">
+            {{ auction?.currentHighestBidValue | currency: "EUR": true }}
+            <span class="highest-chip" [outerHTML]="auction | highestBidder: auctions?.items">
+            </span>
+          </b>
+          <span fxFlex></span>
+          <span>{{ auction?.remainingTimeInSeconds | formatHour }}</span>
+        </p>
+        
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<div  *ngIf="isLoading" class="text-center" fxLayout="row wrap" fxLayoutAlign="center start">
+  <mat-spinner [diameter]="50"></mat-spinner>
+</div>
+
